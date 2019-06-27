@@ -1,0 +1,34 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+/* Hide all steps by default: */
+
+.tab {
+  display: none;
+}
+
+#crm-sync-calling {
+    display: none;
+}
+
+#notification-results, #nr-details {
+    display: none;
+}
+
+div#notification-results {
+    margin-top: 40px;
+}
+
+span.glyphicon.lg {
+    font-size: 55px;
+    opacity: .5;
+}
+
+.navitabs-right a {
+    float: right;
+}
+
+#consumer-details {
+	display: none;
+}
