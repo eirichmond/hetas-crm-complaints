@@ -226,6 +226,16 @@ $(function() {
 		e.preventDefault();
 		show_active_tab($(this).data('tabber'));
 		$('#notification-results').show();
+		$('#consumer-details').show();
+
+		// now fillup the hidden feilds with the mock data
+		$('.nr-notifictionid').val('89ae3528-7b99-e911-80d3-00155d0515b7');
+		$('.nr-contactid').val('');
+		$('.nr-businessid').val('be12c1d9-d498-e911-80d3-00155d0515b7');
+		$('.nr-schemeid').val('338a7da0-d598-e911-80d3-00155d0515b7');
+		$('.nr-operativeid').val('2dec2053-8599-e911-80d3-00155d0515b7');
+
+
 	});
 
 	$('#nr-tabs a').click(function (e) {

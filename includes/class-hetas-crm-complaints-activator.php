@@ -34,7 +34,7 @@ class Hetas_Crm_Complaints_Activator {
 		/**
 		* Detect plugin. For use in Admin area only.
 		*/
-		if ( !is_plugin_active( 'dynamics-crm/dynamics-crm.php' ) ) {
+		if ( !is_plugin_active( 'hetas-dynamics-crm/hetas-dynamics-crm.php' ) ) {
 			wp_die('Please ensure the Cantata Dynamics CRM Plugin is active!');
 		}
 		
