@@ -96,7 +96,7 @@ class Hetas_Crm_Complaints_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/hetas-crm-complaints-public.js', array( 'jquery' ), $this->version, true );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/hetas-crm-complaints-public.js', array( 'jquery', 'jquery-ui-datepicker' ), $this->version, true );
 		wp_localize_script( $this->plugin_name, 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ), 'nextNonce' => wp_create_nonce( 'ajax-call-nonce' ) ) );
 
 	}
@@ -147,6 +147,7 @@ class Hetas_Crm_Complaints_Public {
 		$response = $call->get_crm_notification_by_van_name($van_name);
 		$notification_items = $call->get_notification_items_by_notification_id($response->value[0]->van_notificationid);
 		$consumer = $call->get_contact_by_contact_id($response->value[0]->_van_consumerid_value);
+		$installing_operative = $call->get_operative_by_van_operativeid($notification_items->value[0]->_van_operativeid_value);
 		$business = $call->get_business_by_accountid($response->value[0]->_van_businessid_value);
 		//$scheme = $call->get_scheme_by_id($response->value[0]->_van_schemeid_value);
 		$scheme = $call->get_schemes_by_business_id($response->value[0]->_van_businessid_value);
@@ -156,7 +157,8 @@ class Hetas_Crm_Complaints_Public {
 			$consumer->value[0],
 			$business->value[0],
 			$scheme->value[0],
-			$notification_items->value
+			$notification_items->value,
+			$installing_operative
 		);
 		
 		//wp_send_json( $response->value[0] );

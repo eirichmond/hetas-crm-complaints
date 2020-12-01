@@ -9,7 +9,6 @@ if ( ! isset( $_POST['hetas_complaints_nonce'] ) || ! wp_verify_nonce( $_POST['h
 
 } else {
 	
-	
 	$contactid = $_POST['contactid'];
 
 	// if no contact id

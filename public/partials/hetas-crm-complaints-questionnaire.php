@@ -163,9 +163,9 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 
 <!-- search CRM by Notification Reference show results -->
 
-<div class="row">
+<div class="blockpanel bg-success p-15 br-5">
 
-	<div class="blockpanel bg-success p-15 br-5">
+	<div class="row">
 
 		<div class="col-md-7">
 
@@ -483,6 +483,39 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 
 				<hr>
 
+				<div id="installer-details">
+
+					<h3>Installer details</h3>
+
+					<div class="row">
+						<div class="col-md-4">
+
+							<div class="form-group">
+
+								<label for="installername" class="control-label">Installer Name</label>
+
+								<input name="installername" type="text" class="form-control nr-installername" id="installername" placeholder="Installer Name">
+
+							</div>
+
+						</div>
+
+						<div class="col-md-4">
+
+							<div class="form-group">
+
+								<label for="installerregistrationnumber" class="control-label">Installer Registration Number</label>
+
+								<input name="installerregistrationnumber" type="text" class="form-control nr-installerregistrationnumber" id="installerregistrationnumber" placeholder="Installer Registration Number">
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
 				<div class="row">
 					<div class="col-md-4">
 
@@ -490,7 +523,7 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 
 							<label for="van_workcompletiondate" class="control-label">Work Completion Date</label>
 
-							<input name="van_workcompletiondate" type="text" class="form-control nr-van_workcompletiondate" id="van_workcompletiondate" placeholder="Work Completion Date" disabled>
+							<input name="van_workcompletiondate" type="text" class="form-control nr-van_workcompletiondate datepicker" id="van_workcompletiondate" placeholder="Work Completion Date" value="">
 
 						</div>
 
@@ -580,14 +613,14 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 							<p>A quotation/estimate?</p>
 							<small>(If YES, please provide a copy)</small>
 
-							<div class="radio">
+							<div class="upload">
 
-								<label class="radio-inline">
-									<input type="radio" name="quotation_estimate" id="quotation_estimateY" value="yes"> Yes
-								</label>
-								<label class="radio-inline">
-									<input type="radio" name="quotation_estimate" id="quotation_estimateY" value="no"> No
-								</label>
+								<form action="" method="post" enctype="multipart/form-data">
+									Select images to upload: disabled until ER has access to the WT api credentials
+									<input type="file" name="quotationUpload" class="btn btn-default" id="quotationUpload" multiple="multiple">
+									<!-- ensure wp nounce is inserted for security -->
+									<button type="submit" class="btn btn-default" name="submit">Upload</button>
+								</form>
 
 							</div>
 
@@ -602,14 +635,14 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 							<p>An invoice?</p>
 							<small>(If YES, please provide a copy)</small>
 
-							<div class="radio">
+							<div class="upload">
 
-								<label class="radio-inline">
-									<input type="radio" name="invoice_provided" id="invoice_providedY" value="yes"> Yes
-								</label>
-								<label class="radio-inline">
-									<input type="radio" name="invoice_provided" id="invoice_providedN" value="no"> No
-								</label>
+								<form action="" method="post" enctype="multipart/form-data">
+									Select images to upload: disabled until ER has access to the WT api credentials
+									<input type="file" name="invoiceUpload" class="btn btn-default" id="invoiceUpload" multiple="multiple">
+									<!-- ensure wp nounce is inserted for security -->
+									<button type="submit" class="btn btn-default" name="submit">Upload</button>
+								</form>
 
 							</div>
 
@@ -726,14 +759,9 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 
 							<p>Has anyone other than the HETAS Registered Installer altered the installation? If so, who?</p>
 
-							<div class="radio">
+							<div class="textbox">
 
-								<label class="radio-inline">
-									<input type="radio" name="altered_installation" id="altered_installationY" value="yes"> Yes
-								</label>
-								<label class="radio-inline">
-									<input type="radio" name="altered_installation" id="altered_installationN" value="no"> No
-								</label>
+								<textarea name="altered_installation" type="text" class="form-control nr-altered_installation" id="altered_installation"></textarea>
 
 							</div>
 
@@ -877,14 +905,14 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 
 							<p>Please provide photographs of the installation and problems</p>
 
-							<div class="radio">
+							<div class="upload">
 
-								<label class="radio-inline">
-									<input type="radio" name="photographs_of_the_installation_available" id="photographs_of_the_installation_availableY" value="yes"> Yes
-								</label>
-								<label class="radio-inline">
-									<input type="radio" name="photographs_of_the_installation_available" id="photographs_of_the_installation_availableN" value="no"> No
-								</label>
+								<form action="" method="post" enctype="multipart/form-data">
+									Select images to upload: disabled until ER has access to the WT api credentials
+									<input type="file" name="fileToUpload" class="btn btn-default" id="fileToUpload" multiple="multiple">
+									<!-- ensure wp nounce is inserted for security -->
+									<button type="submit" class="btn btn-default" name="submit">Upload Files</button>
+								</form>
 
 							</div>
 
@@ -899,14 +927,14 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 
 							<p>Please provide any other relevant correspondence with the installer, if available</p>
 
-							<div class="radio">
+							<div class="upload">
 
-								<label class="radio-inline">
-									<input type="radio" name="correspondence_with_the_installer_available" id="correspondence_with_the_installer_availableY" value="yes"> Yes
-								</label>
-								<label class="radio-inline">
-									<input type="radio" name="correspondence_with_the_installer_available" id="correspondence_with_the_installer_availableN" value="no"> No
-								</label>
+								<form action="" method="post" enctype="multipart/form-data">
+									Select images to upload: disabled until ER has access to the WT api credentials
+									<input type="file" name="fileToUpload" class="btn btn-default" id="fileToUpload" multiple="multiple">
+									<!-- ensure wp nounce is inserted for security -->
+									<button type="submit" class="btn btn-default" name="submit">Upload Files</button>
+								</form>
 
 							</div>
 

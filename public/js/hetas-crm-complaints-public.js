@@ -47,6 +47,10 @@ $(function() {
 	  return day + ' ' + monthNames[monthIndex] + ' ' + year;
 	}
 
+	$( '.datepicker' ).datepicker({
+		dateFormat:'d MM yy'
+	});
+
 	// on change get the operative id
 	$('#nitems').on('change', function(e) {
 		e.preventDefault();
@@ -79,6 +83,10 @@ $(function() {
 	$('#notification-reference-search').on('submit',function(e){
 		e.preventDefault();
 		var van_name = $('#van_name').val();
+		$( '.nr-installername' ).prop( 'disabled', true );
+		$( '.nr-installerregistrationnumber' ).prop( 'disabled', true );
+		$( '#van_workcompletiondate' ).prop( 'disabled', true );
+		
 
 		$('#crm-sync-calling').show();
 
@@ -99,6 +107,8 @@ $(function() {
 					var d =  formatDate(new Date(response[0].van_workcompletiondate));
 					var nd =  formatDate(new Date(response[0].van_submissiondate));
 
+					debugger;
+
 					var html = '<option value="">Select installation item</option>';
 					response[4].forEach(function(item, index) {
 						html += '<option value="'+item._van_operativeid_value+'">'+item.van_name+'</option>';
@@ -109,8 +119,9 @@ $(function() {
 
 					populate_consumer_inputs(response);
 
+
 					$('.nr-wcompletion').text(d);
-					$('.nr-van_workcompletiondate').val(d);
+					$('input[name=van_workcompletiondate]').val(d);
 
 					$('.nr-business-name').text(response[2].name);
 					$('.nr-name').val(response[2].name);
@@ -179,6 +190,10 @@ $(function() {
 		$('.nr-telephone').text(response[1].telephone1);
 		$('.nr-mobile').text(response[1].mobilephone);
 		$('.nr-email').text(response[1].emailaddress1);
+
+		$( '.nr-installername' ).val(response[5].van_name);
+		$( '.nr-installerregistrationnumber' ).val(response[5].van_reference);
+
 	}
 
 	function empty_consumer_inputs() {
