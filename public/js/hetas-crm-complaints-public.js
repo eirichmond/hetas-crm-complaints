@@ -107,7 +107,6 @@ $(function() {
 					var d =  formatDate(new Date(response[0].van_workcompletiondate));
 					var nd =  formatDate(new Date(response[0].van_submissiondate));
 
-					debugger;
 
 					var html = '<option value="">Select installation item</option>';
 					response[4].forEach(function(item, index) {

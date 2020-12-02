@@ -148,7 +148,7 @@ $complaints_form_elements = array(
 			'notes' => array(
 				array('*If you have not been issued with a certificate please provide details of the installer’s name and business information;
 without this information HETAS cannot pursue a complaint on your behalf.'),
-				array('**Please note we can only receive complaints of an installation less than 24 months old.'),
+				array('**Please note we may not be able to assist with complaints regarding installations over 24 months old.'),
 			)
 		),
 );
@@ -349,22 +349,6 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 
 					</div>
 
-					<div class="row">
-
-						<div class="col-md-8">
-
-							<div class="form-group">
-
-								<label for="relationship" class="control-label">Relationship to consumer</label>
-
-								<textarea name="relationship" class="form-control nr-relationship" rows="3" id="relationship" placeholder="If you are not the consumer, please provide details of your relationship with the consumer. All further correspondence will be directed to the consumer’s address (unless we receive written authority from said consumer)."></textarea>
-
-							</div>
-
-						</div>
-
-
-					</div>
 
 					<div class="row">
 						<div class="col-md-4">
@@ -533,9 +517,9 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 
 						<div class="form-group">
 
-							<label for="makemodel" class="control-label">makemodel</label>
+							<label for="makemodel" class="control-label">Make & Model</label>
 
-							<input name="makemodel" type="text" class="form-control nr-makemodel" id="makemodel" placeholder="Mobile">
+							<input name="makemodel" type="text" class="form-control nr-makemodel" id="makemodel" placeholder="Make & Model">
 
 						</div>
 
@@ -744,6 +728,13 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 								</label>
 							</div>
 
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" name="naturecomplaint[]" value="other">
+									Other
+								</label>
+							</div>
+
 						</div>
 
 					</div>
@@ -775,16 +766,12 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 
 							<p>Is the installation subject to legal proceedings?</p>
 
-							<div class="radio">
+							<div class="textbox">
 
-								<label class="radio-inline">
-									<input type="radio" name="installation_legal_proceedings" id="installation_legal_proceedingsY" value="yes"> Yes
-								</label>
-								<label class="radio-inline">
-									<input type="radio" name="installation_legal_proceedings" id="installation_legal_proceedingsN" value="no"> No
-								</label>
+								<textarea name="installation_legal_proceedings" type="text" class="form-control nr-installation_legal_proceedings" id="installation_legal_proceedings"></textarea>
 
 							</div>
+
 
 						</div>
 
