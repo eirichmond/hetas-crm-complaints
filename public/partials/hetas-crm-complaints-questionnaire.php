@@ -297,6 +297,8 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 			</div>
 			<div role="tabpanel" class="tab-pane fade" id="installation">
 
+				<p class="mt-20">Please complete the following fields and submit for us to receive your complaint.  You will receive an acknowledgement via email once we have received it.</p>
+
 				<h3>Are you the Original Consumer?</h3>
 
 				<div class="row">
