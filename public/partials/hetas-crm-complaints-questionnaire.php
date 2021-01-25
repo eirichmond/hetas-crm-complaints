@@ -562,16 +562,6 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 						</div>
 
 					</div>
-					<div class="col-md-4">
-						<div class="form-group">
-
-							<label for="van_hetasid" class="control-label">Installing Company HETAS Registration Number</label>
-
-							<input name="van_hetasid" type="text" class="form-control nr-van_hetasid" id="van_hetasid" placeholder="Installing Company HETAS Registration Number">
-
-						</div>
-
-					</div>
 				</div>
 
 
