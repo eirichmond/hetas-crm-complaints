@@ -297,8 +297,6 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 			</div>
 			<div role="tabpanel" class="tab-pane fade" id="installation">
 
-				<p class="mt-20">Please complete the following fields and submit for us to receive your complaint.  You will receive an acknowledgement via email once we have received it.</p>
-
 				<h3>Are you the Original Consumer?</h3>
 
 				<div class="row">
@@ -543,9 +541,9 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 
 						<div class="form-group">
 
-							<label for="van_hetasid" class="control-label">Installing Company HETAS Registration Number</label>
+							<label for="van_hetasid" class="control-label">Company HETAS Registration No.</label>
 
-							<input name="van_hetasid" type="text" class="form-control nr-van_hetasid" id="van_hetasid" placeholder="Installing Company HETAS Registration Number">
+							<input name="van_hetasid" type="text" class="form-control nr-van_hetasid" id="van_hetasid" placeholder="Company HETAS Registration No.">
 
 						</div>
 
@@ -558,6 +556,16 @@ without this information HETAS cannot pursue a complaint on your behalf.'),
 							<label for="van_installersuppliedreference" class="control-label">Installer Reference</label>
 
 							<input name="van_installersuppliedreference" type="text" class="form-control nr-van_installersuppliedreference" id="van_installersuppliedreference" placeholder="Installer Reference">
+
+						</div>
+
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+
+							<label for="van_hetasid" class="control-label">Company HETAS Registration No.</label>
+
+							<input name="van_hetasid" type="text" class="form-control nr-van_hetasid" id="van_hetasid" placeholder="Company HETAS Registration No.">
 
 						</div>
 
